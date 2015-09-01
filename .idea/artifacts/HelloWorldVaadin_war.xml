@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HelloWorldVaadin:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="HelloWorldVaadin-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="HelloWorldVaadin:war exploded" />
+    </root>
+  </artifact>
+</component>
