@@ -7,37 +7,57 @@ import org.HelloWorldVaadin.client.Button.BootstrapButtonState;
 
 public class BootstrapButton extends AbstractComponent {
 
-    private BootstrapButtonRpc rpc = new BootstrapButtonRpc() {
+    private final BootstrapButtonRpc rpc = new BootstrapButtonRpc() {
 
         @Override
         public void click(MouseEventDetails details) {
-                      fireEvent(new BootstrapClickEvent(BootstrapButton.this));
+            fireEvent(new BootstrapClickEvent(BootstrapButton.this));
         }
     };
 
-    public BootstrapButton(String caption) {
-        setText(caption);
-        setImmediate(true);
+    public BootstrapButton() {
         registerRpc(rpc);
     }
 
-    public BootstrapButtonState getState() { return (BootstrapButtonState)super.getState(); }
+    public BootstrapButton(String text) {
 
-    public void setType(BootstrapButtonType type) { getState().buttonType = type.toCssName();}
+        this();
+        setText(text);
+}
+
+    protected BootstrapButtonState getState() {
+        return (BootstrapButtonState) super.getState();
+    }
+
+    public String getText() {
+        return getState().text;
+    }
 
     public void setText(String text) {
         getState().text = text;
     }
 
-    public String getText() { return getState().text; }
-
-    public void setEnabled(boolean enabled) { getState().isEnabled = enabled; }
-
-    public void setSize(BootstrapButtonSize size) {
-
-        getState().buttonSize = size.toCssName();
-        markAsDirty();
+    public boolean isEnabled() {
+        return getState().isEnabled;
     }
 
-    public String getSize() { return getState().buttonSize; }
+    public void setEnabled(boolean enabled) {
+        getState().isEnabled = enabled;
+    }
+
+    public BootstrapButtonSize getSize() {
+        return BootstrapButtonSize.valueOf(getState().size);
+    }
+
+    public void setSize(BootstrapButtonSize size) {
+        getState().size = size.toString();
+    }
+
+    public BootstrapButtonType getType() {
+        return BootstrapButtonType.valueOf(getState().type);
+    }
+
+    public void setType(BootstrapButtonType type) {
+        getState().type = type.toString();
+    }
 }

@@ -1,12 +1,16 @@
+org\HelloWorldVaadin\BootstrapPanel.class
 org\HelloWorldVaadin\client\Button\VBootstrapButton.class
 org\HelloWorldVaadin\MyUI.class
 org\HelloWorldVaadin\MyUI$1.class
+org\HelloWorldVaadin\client\Panel\VBootstrapPanel.class
 org\HelloWorldVaadin\MyUI$MyUIServlet.class
 org\HelloWorldVaadin\BootstrapButton$1.class
+org\HelloWorldVaadin\client\Panel\BootstrapPanelConnecter.class
 org\HelloWorldVaadin\client\Button\BootstrapButtonRpc.class
 org\HelloWorldVaadin\BootstrapButton.class
 org\HelloWorldVaadin\BootstrapButtonType.class
 org\HelloWorldVaadin\BootstrapButtonSize.class
 org\HelloWorldVaadin\BootstrapClickEvent.class
+org\HelloWorldVaadin\client\Panel\BootstrapPanelState.class
 org\HelloWorldVaadin\client\Button\BootstrapButtonConnector.class
 org\HelloWorldVaadin\client\Button\BootstrapButtonState.class

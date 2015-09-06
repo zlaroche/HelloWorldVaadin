@@ -1,0 +1,1 @@
+$wnd.org_HelloWorldVaadin_MyAppWidgetset.runAsyncCallback2('qdb(1568,1,_Wd);_.tc=function fdc(){X$b((!Q$b&&(Q$b=new a_b),Q$b),this.a.d)};sQd(Th)(2);\n//# sourceURL=org.HelloWorldVaadin.MyAppWidgetset-2.js\n')

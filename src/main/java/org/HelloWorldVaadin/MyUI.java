@@ -7,10 +7,9 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.Notification;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
+
+import java.util.Iterator;
 
 /**
  *mcn
@@ -21,22 +20,31 @@ public class MyUI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
-        layout.setMargin(true);
-        setContent(layout);
+
+        final BootstrapPanel panel1 = new BootstrapPanel();
+        final BootstrapPanel panel2 = new BootstrapPanel();
 
         final BootstrapButton button = new BootstrapButton("Efflouresence");
         button.setType(BootstrapButtonType.SUCCESS);
         button.setSize(BootstrapButtonSize.EXTRA_SMALL);
 
+        panel1.addComponent(button);
+        panel1.addComponent(panel2);
+        setContent(panel1);
+
+        Iterator<Component> iterator = panel1.iterator();
+        String children1 = "";
+        while (iterator.hasNext())
+            children1 += iterator.next().toString() + ", ";
+        final String children2 = children1;
+
         button.addListener(new Listener() {
             @Override
             public void componentEvent(Event event) {
-                Notification.show("happenings");
+                Notification.show(children2);
             }
         });
 
-        layout.addComponent(button);
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
