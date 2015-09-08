@@ -1,4 +1,4 @@
-package org.HelloWorldVaadin;
+package org.HelloWorldVaadin.server;
 
 import javax.servlet.annotation.WebServlet;
 

@@ -1,4 +1,4 @@
-package org.HelloWorldVaadin;
+package org.HelloWorldVaadin.server;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,5 +11,5 @@ public enum BootstrapButtonType {
         INFO,
         WARNING,
         DANGER,
-        LINK;
+        LINK,
 }

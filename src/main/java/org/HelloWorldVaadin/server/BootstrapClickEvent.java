@@ -1,4 +1,4 @@
-package org.HelloWorldVaadin;
+package org.HelloWorldVaadin.server;
 
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Component.Event;

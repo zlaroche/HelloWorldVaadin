@@ -1,4 +1,4 @@
-package org.HelloWorldVaadin;
+package org.HelloWorldVaadin.server;
 
 import com.vaadin.shared.MouseEventDetails;
 import com.vaadin.ui.AbstractComponent;

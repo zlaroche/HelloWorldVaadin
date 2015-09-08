@@ -1,4 +1,4 @@
-package org.HelloWorldVaadin;
+package org.HelloWorldVaadin.server;
 
 import com.vaadin.ui.AbstractComponentContainer;
 import com.vaadin.ui.Component;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public abstract class AbstractBootstrapComponentContainer extends AbstractComponentContainer {
 
-    private final List<Component> children = new ArrayList<Component>();
+    private final List<Component> children = new ArrayList<>();
 
     @Override
     protected BootstrapPanelState getState() {

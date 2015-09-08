@@ -7,7 +7,7 @@ import com.vaadin.client.communication.StateChangeEvent;
 import com.vaadin.client.ui.AbstractComponentContainerConnector;
 import com.vaadin.shared.Connector;
 import com.vaadin.shared.ui.Connect;
-import org.HelloWorldVaadin.BootstrapPanel;
+import org.HelloWorldVaadin.server.BootstrapPanel;
 
 @Connect(BootstrapPanel.class)
 public class BootstrapPanelConnecter extends AbstractComponentContainerConnector {
