@@ -3,7 +3,6 @@ package org.HelloWorldVaadin.client.Panel;
 import com.vaadin.client.ComponentConnector;
 import com.vaadin.client.ConnectorHierarchyChangeEvent;
 import com.vaadin.client.annotations.OnStateChange;
-import com.vaadin.client.communication.StateChangeEvent;
 import com.vaadin.client.ui.AbstractComponentContainerConnector;
 import com.vaadin.shared.Connector;
 import com.vaadin.shared.ui.Connect;
@@ -23,7 +22,7 @@ public class BootstrapPanelConnecter extends AbstractComponentContainerConnector
     }
 
     @OnStateChange("children")
-    public void onChildrenChange(StateChangeEvent stateChangeEvent) {
+    private void onChildrenChange() {
 
         for (Connector child: getState().children)
             getWidget().add(((ComponentConnector) child).getWidget());
