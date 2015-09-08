@@ -45,6 +45,9 @@ public class MyUI extends UI {
             }
         });
 
+        Button button1 = new Button();
+
+
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)

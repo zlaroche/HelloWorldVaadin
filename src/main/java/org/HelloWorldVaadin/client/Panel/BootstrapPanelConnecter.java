@@ -2,6 +2,7 @@ package org.HelloWorldVaadin.client.Panel;
 
 import com.vaadin.client.ComponentConnector;
 import com.vaadin.client.ConnectorHierarchyChangeEvent;
+import com.vaadin.client.annotations.OnStateChange;
 import com.vaadin.client.communication.StateChangeEvent;
 import com.vaadin.client.ui.AbstractComponentContainerConnector;
 import com.vaadin.shared.Connector;
@@ -21,15 +22,11 @@ public class BootstrapPanelConnecter extends AbstractComponentContainerConnector
         return (VBootstrapPanel) super.getWidget();
     }
 
-    @Override
-    public void onStateChanged(StateChangeEvent stateChangeEvent) {
+    @OnStateChange("children")
+    public void onChildrenChange(StateChangeEvent stateChangeEvent) {
 
-        super.onStateChanged(stateChangeEvent);
-
-        VBootstrapPanel panel = getWidget();
-        BootstrapPanelState state = getState();
-        for (Connector child: state.children)
-            panel.add(((ComponentConnector)child).getWidget());
+        for (Connector child: getState().children)
+            getWidget().add(((ComponentConnector) child).getWidget());
     }
 
     @Override

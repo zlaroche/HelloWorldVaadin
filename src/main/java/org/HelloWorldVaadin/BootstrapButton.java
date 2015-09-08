@@ -23,7 +23,7 @@ public class BootstrapButton extends AbstractComponent {
 
         this();
         setText(text);
-}
+    }
 
     protected BootstrapButtonState getState() {
         return (BootstrapButtonState) super.getState();
